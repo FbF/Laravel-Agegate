@@ -3,6 +3,14 @@ Laravel-Agegate
 
 A Laravel 4 package for adding an age gate to a site
 
+## Features
+
+* Redirects requests for guarded routes to agegate URL
+* Agegate form with input type=date
+* Configurable minimum age
+* Sets 'forever' cookie if user is old enough
+* Redirects user back to the URL they were trying to access
+
 ## Installation
 
 Add the following to you composer.json file
@@ -26,6 +34,10 @@ Publish the config
 URI of the agegate page
 
 	'agegate_uri' => 'agegate',
+
+The minimum age to access the site
+
+	'minimum_age' => 18,
 
 ## Usage
 
