@@ -1,0 +1,23 @@
+{
+    "name": "fbf/laravel-agegate",
+    "description": "",
+    "authors": [
+        {
+            "name": "Neil Crookes",
+            "email": "neil.crookes@fivebyfiveuk.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.0.x"
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations"
+        ],
+        "psr-0": {
+            "Fbf\\LaravelAgegate": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
