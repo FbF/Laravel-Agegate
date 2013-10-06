@@ -1,6 +1,8 @@
 {
     "name": "fbf/laravel-agegate",
-    "description": "",
+    "description": "A Laravel 4 package for adding an agegate to a site",
+    "tags": ["laravel","agegate"],
+    "license": "MIT",
     "authors": [
         {
             "name": "Neil Crookes",
