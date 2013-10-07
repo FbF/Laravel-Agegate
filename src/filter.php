@@ -1,6 +1,4 @@
-<?php
-
-use Carbon\Carbon;
+<?php namespace Fbf\LaravelAgegate;
 
 /**
  * Class LaravelAgegateFilter
@@ -11,10 +9,10 @@ class LaravelAgegateFilter {
 
 	public function filter()
 	{
-		if (!Cookie::get('old_enough'))
+		if (!\Cookie::get('old_enough'))
 		{
-			Session::flash('url.intended', Request::url());
-			return Redirect::to(Config::get('laravel-agegate::agegate_uri'));
+			\Session::flash('url.intended', \Request::url());
+			return \Redirect::action('Fbf\LaravelAgegate\AgegateController@agegate');
 		}
 	}
 

@@ -20,7 +20,6 @@ class LaravelAgegateServiceProvider extends ServiceProvider {
 	{
 		$this->package('fbf/laravel-agegate');
 
-    	include __DIR__.'/../../routes.php';
     	include __DIR__.'/../../filter.php';
     	include __DIR__.'/../../macros.php';
 	}
