@@ -6,8 +6,8 @@ A Laravel 4 package for adding an age gate to a site
 ## Features
 
 * Redirects requests for guarded routes to agegate URL
-* Agegate form with input type=date
-* Configurable minimum age
+* Agegate form with input type=date or select tags for year, month and day
+* Configurable url for agegate, minimum age, cookie name, cookie value
 * Sets 'forever' cookie if user is old enough
 * Redirects user back to the URL they were trying to access
 
@@ -38,6 +38,20 @@ URI of the agegate page
 The minimum age to access the site
 
 	'minimum_age' => 18,
+
+The input type to use. Choices are:
+"date" for html5 input type="date"
+"select" for 3 select tags for day, month and year
+
+	'input_type' => 'select',
+
+The name of the cookie to set. Change this to whatever you want
+
+	'cookie_name' => 'age_ok',
+
+The value of the cookie to set. Change this to something unique
+
+	'cookie_val' => 'hell yeah!',
 
 ## Usage
 

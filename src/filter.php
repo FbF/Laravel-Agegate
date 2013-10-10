@@ -9,7 +9,8 @@ class LaravelAgegateFilter {
 
 	public function filter()
 	{
-		if (!\Cookie::get('old_enough'))
+		$cookieVal = \Cookie::get(\Config::get('laravel-agegate::cookie_name'));
+		if ($cookieVal != \Config::get('laravel-agegate::cookie_val'))
 		{
 			\Session::flash('url.intended', \Request::url());
 			return \Redirect::action('Fbf\LaravelAgegate\AgegateController@agegate');
