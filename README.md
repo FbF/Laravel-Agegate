@@ -85,4 +85,17 @@ You also need to add the agegate routes to your app/routes.php, for example:
 		)
 	);
 
-(I used to have them bundled in the package, but I needed to attach more before filters to the routes, for example mcamara/laravel-localization, so needed to put them in the app/routes.php file instead)
+If you are using route prefixes in combination with the agegate filter, you can do the following:
+
+	Route::get(
+	    Request::segment(1).'/'.Config::get('laravel-agegate::agegate_uri'),
+	    'Fbf\LaravelAgegate\AgegateController@agegate'
+	);
+
+	Route::post(
+	    Request::segment(1).'/'.Config::get('laravel-agegate::agegate_uri'),
+	    array(
+	        'before' => 'csrf',
+	        'uses' => 'Fbf\LaravelAgegate\AgegateController@doAgegate'
+	    )
+	);
