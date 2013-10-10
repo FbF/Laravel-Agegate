@@ -12,9 +12,18 @@ class AgegateController extends \Illuminate\Routing\Controllers\Controller {
 
 	public function doAgegate()
 	{
-		$maxDob = Carbon::now('Europe/London')->subYears(\Config::get('laravel-agegate::minimum_age'))->toDateString();
+		$dob = null;
+		if (\Input::has('dob'))
+		{
+			$dob = \Input::get('dob');
+		}
+		elseif (\Input::has('dob_year') && \Input::has('dob_month') && \Input::has('dob_day'))
+		{
+			$dob = \Input::get('dob_year').'-'.\Input::get('dob_month').'-'.\Input::get('dob_day');
+		}
+		$maxDob = Carbon::now()->subYears(\Config::get('laravel-agegate::minimum_age'))->toDateString();
 		$validator = \Validator::make(
-		    array('dob' => \Input::get('dob')),
+		    array('dob' => $dob),
 		    array('dob' => 'required|date|date_format:Y-m-d|before:'.$maxDob),
 		    \Lang::get('laravel-agegate::validation.custom')
 		);
