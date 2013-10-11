@@ -10,7 +10,7 @@ class AgegateController extends \Illuminate\Routing\Controllers\Controller {
 	public function agegate()
 	{
 		\Session::keep('url.intended');
-		return \View::make('laravel-agegate::agegate');
+		return \View::make(\Config::get('laravel-agegate::view'));
 	}
 
 	/**

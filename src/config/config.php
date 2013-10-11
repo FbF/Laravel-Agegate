@@ -29,4 +29,11 @@ return array(
 	 */
 	'cookie_val' => 'hell yeah!',
 
+	/**
+	 * The view that should be rendered for the agegate. You can use the bundled view, or specify your own and use
+	 * @include('laravel-agegate::agegate') to get the agegate form and validation errors
+	 */
+	'view' => 'laravel-agegate::agegate',
+
+
 );

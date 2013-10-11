@@ -53,6 +53,10 @@ The value of the cookie to set. Change this to something unique
 
 	'cookie_val' => 'hell yeah!',
 
+The view that should be rendered for the agegate. You can use the bundled view, or specify your own and use @include('laravel-agegate::agegate') to get the agegate form and validation errors
+
+	'view' => 'laravel-agegate::agegate',
+
 ## Usage
 
 Register the filter by adding the following to app/filters.php
