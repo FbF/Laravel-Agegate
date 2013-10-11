@@ -1,5 +1,8 @@
 <?php
 
 return array(
-	'placeholder' => 'dd/mm/yyyy',
+	'submit' => 'Soumettre',
+	'dd' => 'jour',
+	'mm' => 'mois',
+	'yyyy' => 'année',
 );

@@ -58,6 +58,7 @@ Form::macro('agegateselectsdate', function($name, $value = null, $options = arra
 		switch ($component) {
 			case 'd':
 				$input .= '<select name="' . $name . '_day">';
+				$input .= '<option value="">'.trans('dd').'</option>';
 				foreach (range(1,31) as $num)
 				{
 					$num = str_pad($num, 2, '0', STR_PAD_LEFT);
@@ -72,6 +73,7 @@ Form::macro('agegateselectsdate', function($name, $value = null, $options = arra
 				break;
 			case 'm':
 				$input .= '<select name="' . $name . '_month">';
+				$input .= '<option value="">'.trans('mm').'</option>';
 				foreach (range(1,12) as $num)
 				{
 					$num = str_pad($num, 2, '0', STR_PAD_LEFT);
@@ -86,6 +88,7 @@ Form::macro('agegateselectsdate', function($name, $value = null, $options = arra
 				break;
 			case 'y':
 				$input .= '<select name="' . $name . '_year">';
+				$input .= '<option value="">'.trans('yyyy').'</option>';
 				$min = 1900;
 				if (array_key_exists('min', $options) && preg_match('/^(\d{4})-\d{2}-\d{2}$/', $options['min'], $matches))
 				{

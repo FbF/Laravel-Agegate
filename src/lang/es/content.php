@@ -1,5 +1,8 @@
 <?php
 
 return array(
-	'placeholder' => 'dd/mm/yyyy',
+	'submit' => 'Presentar',
+	'dd' => 'día',
+	'mm' => 'mes',
+	'yyyy' => 'año',
 );

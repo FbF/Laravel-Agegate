@@ -2,9 +2,9 @@
 
 return array(
 	'custom' => array(
-    	'dob.required' => 'Por favor enter your date of birth',
-    	'dob.date' => 'Please enter a valid date',
-    	'dob.date_format' => 'Please enter a valid date in the format yyyy-mm-dd',
-    	'dob.before' => 'Sorry, you are not old enough to access this site',
+    	'dob.required' => 'S\'il vous plaît entrer votre date de naissance',
+    	'dob.date' => 'S\'il vous plaît entrer une date valide',
+    	'dob.date_format' => 'S\'il vous plaît entrer une date valide au format yyyy-mm-dd',
+    	'dob.before' => 'Désolé, vous n\'êtes pas assez vieux pour accéder à ce site',
 	),
 );

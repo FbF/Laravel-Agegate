@@ -1,5 +1,8 @@
 <?php
 
 return array(
-	'placeholder' => 'dd/mm/yyyy',
+	'submit' => 'Einreichen',
+	'dd' => 'Tag',
+	'mm' => 'Monat',
+	'yyyy' => 'Jahr',
 );
