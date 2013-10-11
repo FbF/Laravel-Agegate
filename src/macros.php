@@ -94,12 +94,12 @@ Form::macro('agegateselectsdate', function($name, $value = null, $options = arra
 				{
 					$min = $matches[1];
 				}
-				$max = date('Y')+100;
+				$max = date('Y');
 				if (array_key_exists('max', $options) && preg_match('/^(\d{4})-\d{2}-\d{2}$/', $options['max'], $matches))
 				{
 					$max = $matches[1];
 				}
-				foreach (range($min, $max) as $num)
+				foreach (range($max, $min) as $num)
 				{
 					$input .= '<option value="' . $num . '"';
 					if ($num == $selectedYear)
