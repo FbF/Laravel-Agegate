@@ -1,7 +1,7 @@
 <?php
 
 return array(
-	'submit' => 'Einreichen',
+	'submit' => 'Geben Sie',
 	'dd' => 'Tag',
 	'mm' => 'Monat',
 	'yyyy' => 'Jahr',

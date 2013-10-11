@@ -1,7 +1,7 @@
 <?php
 
 return array(
-	'submit' => 'Submit',
+	'submit' => 'Enter',
 	'dd' => 'dd',
 	'mm' => 'mm',
 	'yyyy' => 'yyyy',

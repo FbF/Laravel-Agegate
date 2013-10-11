@@ -1,7 +1,7 @@
 <?php
 
 return array(
-	'submit' => 'Soumettre',
+	'submit' => 'Entrez',
 	'dd' => 'jour',
 	'mm' => 'mois',
 	'yyyy' => 'année',
