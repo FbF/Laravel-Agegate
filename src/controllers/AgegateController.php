@@ -2,7 +2,7 @@
 
 use \Carbon\Carbon;
 
-class AgegateController extends \Illuminate\Routing\Controllers\Controller {
+class AgegateController extends \BaseController {
 
 	/**
 	 * Renders the age gate view
