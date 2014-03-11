@@ -119,7 +119,7 @@ You can prevent them by setting the config setting `allowed_user_agents.mode` to
 
 If you do want to allow certain user agents through the package provides 3 approaches:
 
-# Using `phpbrowscap_crawler`
+* Using `phpbrowscap_crawler`
 
   This is a composer package that is installed as a dependency of the agegate package.
 
@@ -138,10 +138,10 @@ If you do want to allow certain user agents through the package provides 3 appro
 
   The disadvantage of the overhead on a very occasional request (which may be a bot you don't care about anyway) is outweighed by the advantage of having a more robust test to ensure the filter is not applied to any bots, since the alternative methods (see below) have room for error in that you may not come up with a list of strings to correctly match all the user agents you intended to target.
 
-# Using `contains`
+* Using `contains`
 
   Add a list of strings to the `allowed_user_agents.strings` config setting and if the user agent contains one of these strings, the age gate will not be applied.
 
-# Using `exact`
+* Using `exact`
 
   Add a list of strings to the `allowed_user_agents.strings` config setting and if the user agent exactly matches one of these strings, the age gate will not be applied.
