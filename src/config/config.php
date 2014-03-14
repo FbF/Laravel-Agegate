@@ -30,6 +30,11 @@ return array(
 	'cookie_val' => 'hell yeah!',
 
 	/**
+	 * The age of the cookie to set. Options are 'forever', an integer (minutes) or the default is for the session
+	 */
+	'cookie_age' => 'forever',
+
+	/**
 	 * The view that should be rendered for the agegate. You can use the bundled view, or specify your own and use
 	 * @include('laravel-agegate::agegate') to get the agegate form and validation errors
 	 */

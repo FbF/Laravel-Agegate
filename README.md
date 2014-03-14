@@ -8,7 +8,7 @@ A Laravel 4 package for adding an age gate to a site
 * Redirects requests for guarded routes to agegate URL
 * Agegate form with input type=date or select tags for year, month and day
 * Configurable url for agegate, minimum age, cookie name, cookie value
-* Sets 'forever' cookie if user is old enough
+* Sets 'forever', or 'session' or X minute (configurable) cookie if user is old enough
 * Redirects user back to the URL they were trying to access
 * Optionally allows bots/crawlers/spiders through age gate using one of 3 approaches
 
@@ -53,6 +53,10 @@ The name of the cookie to set. Change this to whatever you want
 The value of the cookie to set. Change this to something unique
 
 	'cookie_val' => 'hell yeah!',
+
+The age of the cookie to set. Options are 'forever', an integer (minutes) or the default is for the session
+
+	'cookie_age' => 'forever',
 
 The view that should be rendered for the agegate. You can use the bundled view, or specify your own and use @include('laravel-agegate::agegate') to get the agegate form and validation errors
 

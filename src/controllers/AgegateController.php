@@ -43,8 +43,21 @@ class AgegateController extends \BaseController {
 		    return \Redirect::action('Fbf\LaravelAgegate\AgegateController@agegate')->withErrors($validator)->withInput();
 		}
 
-		// Set a forever cookie saying the user is old enough
-		$cookie = \Cookie::forever(\Config::get('laravel-agegate::cookie_name'), \Config::get('laravel-agegate::cookie_val'));
+		if (\Config::get('laravel-agegate::cookie_age') == 'forever')
+		{
+			// Set a forever cookie saying the user is old enough
+			$cookie = \Cookie::forever(\Config::get('laravel-agegate::cookie_name'), \Config::get('laravel-agegate::cookie_val'));
+		}
+		elseif (is_int(\Config::get('laravel-agegate::cookie_age')))
+		{
+			// Sets a cookie lasting X minutes saying the user is old enough
+			Cookie::make(\Config::get('laravel-agegate::cookie_name'), \Config::get('laravel-agegate::cookie_val'), \Config::get('laravel-agegate::cookie_age'));
+		}
+		else
+		{
+			// Sets a session cookie saying the user is old enough
+			$cookie = \Cookie::make(\Config::get('laravel-agegate::cookie_name'), \Config::get('laravel-agegate::cookie_val'));
+		}
 		return \Redirect::intended('/')->withCookie($cookie);
 	}
 
