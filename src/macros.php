@@ -59,7 +59,7 @@ Form::macro('agegateselectsdate', function($name, $value = null, $options = arra
 	{
 		switch ($component) {
 			case 'd':
-				$input .= '<select name="' . $name . '_day" class="' . $classPrefix . $name . '-day">';
+				$input .= '<select name="' . $name . '_day" class="' . $classPrefix . $name . '-day"'.($options['disabled'] ? ' disabled="disabled"' : '').'>';
 				$input .= '<option value="">'.trans('laravel-agegate::content.dd').'</option>';
 				foreach (range(1,31) as $num)
 				{
@@ -74,7 +74,7 @@ Form::macro('agegateselectsdate', function($name, $value = null, $options = arra
 				$input .= '</select>';
 				break;
 			case 'm':
-				$input .= '<select name="' . $name . '_month" class="' . $classPrefix . $name . '-month">';
+				$input .= '<select name="' . $name . '_month" class="' . $classPrefix . $name . '-month"'.($options['disabled'] ? ' disabled="disabled"' : '').'>';
 				$input .= '<option value="">'.trans('laravel-agegate::content.mm').'</option>';
 				foreach (range(1,12) as $num)
 				{
@@ -89,7 +89,7 @@ Form::macro('agegateselectsdate', function($name, $value = null, $options = arra
 				$input .= '</select>';
 				break;
 			case 'y':
-				$input .= '<select name="' . $name . '_year" class="' . $classPrefix . $name . '-year">';
+				$input .= '<select name="' . $name . '_year" class="' . $classPrefix . $name . '-year"'.($options['disabled'] ? ' disabled="disabled"' : '').'>';
 				$input .= '<option value="">'.trans('laravel-agegate::content.yyyy').'</option>';
 				$min = 1900;
 				if (array_key_exists('min', $options) && preg_match('/^(\d{4})-\d{2}-\d{2}$/', $options['min'], $matches))
