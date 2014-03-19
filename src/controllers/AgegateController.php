@@ -46,7 +46,7 @@ class AgegateController extends \BaseController {
 			$dob = \Input::get('dob_year').'-'.\Input::get('dob_month').'-'.\Input::get('dob_day');
 		}
 
-		$maxDob = Carbon::now()->subYears(\Config::get('laravel-agegate::minimum_age'))->toDateString();
+		$maxDob = Carbon::now()->subYears(\Config::get('laravel-agegate::minimum_age'))->addDay()->toDateString();
 
 		$validator = \Validator::make(
 		    array('dob' => $dob),
