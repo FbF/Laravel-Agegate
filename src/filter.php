@@ -95,7 +95,8 @@ class LaravelAgegateFilter {
 
 	public function rememberDesiredUrl()
 	{
-		\Session::flash('url.intended', \Request::url());
+		$desiredUrl = \Request::fullUrl();
+		\Session::flash('url.intended', $desiredUrl);
 	}
 
 	public function getAgeGateRedirect()
