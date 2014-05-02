@@ -53,21 +53,13 @@ Form::macro('agegateselectsdate', function($name, $value = null, $options = arra
 
 	$input = '';
 
-<<<<<<< HEAD
-    $class_prefix = (isset($options['class_prefix']) && !empty($options['class_prefix'])) ? $options['class_prefix'] : '';
-=======
 	$classPrefix = (isset($options['class_prefix']) && !empty($options['class_prefix'])) ? $options['class_prefix'] : '';
->>>>>>> c63b629fca5aafb5fb1a4d6145a3097c427f9bfc
 
 	foreach ($components as $component)
 	{
 		switch ($component) {
 			case 'd':
-<<<<<<< HEAD
-				$input .= '<select name="' . $name . '_day" class="' . $class_prefix . $name . '-day">';
-=======
 				$input .= '<select name="' . $name . '_day" class="' . $classPrefix . $name . '-day"'.($options['disabled'] ? ' disabled="disabled"' : '').'>';
->>>>>>> c63b629fca5aafb5fb1a4d6145a3097c427f9bfc
 				$input .= '<option value="">'.trans('laravel-agegate::content.dd').'</option>';
 				foreach (range(1,31) as $num)
 				{
@@ -82,11 +74,7 @@ Form::macro('agegateselectsdate', function($name, $value = null, $options = arra
 				$input .= '</select>';
 				break;
 			case 'm':
-<<<<<<< HEAD
-				$input .= '<select name="' . $name . '_month" class="' . $class_prefix . $name . '-month">';
-=======
 				$input .= '<select name="' . $name . '_month" class="' . $classPrefix . $name . '-month"'.($options['disabled'] ? ' disabled="disabled"' : '').'>';
->>>>>>> c63b629fca5aafb5fb1a4d6145a3097c427f9bfc
 				$input .= '<option value="">'.trans('laravel-agegate::content.mm').'</option>';
 				foreach (range(1,12) as $num)
 				{
@@ -101,11 +89,7 @@ Form::macro('agegateselectsdate', function($name, $value = null, $options = arra
 				$input .= '</select>';
 				break;
 			case 'y':
-<<<<<<< HEAD
-				$input .= '<select name="' . $name . '_year" class="' . $class_prefix . $name . '-year">';
-=======
 				$input .= '<select name="' . $name . '_year" class="' . $classPrefix . $name . '-year"'.($options['disabled'] ? ' disabled="disabled"' : '').'>';
->>>>>>> c63b629fca5aafb5fb1a4d6145a3097c427f9bfc
 				$input .= '<option value="">'.trans('laravel-agegate::content.yyyy').'</option>';
 				$min = 1900;
 				if (array_key_exists('min', $options) && preg_match('/^(\d{4})-\d{2}-\d{2}$/', $options['min'], $matches))
