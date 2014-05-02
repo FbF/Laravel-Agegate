@@ -3,7 +3,6 @@
     "description": "A Laravel 4 package for adding an agegate to a site",
     "tags": ["laravel","agegate"],
     "license": "MIT",
-    "version": "4.0.1",
     "authors": [
         {
             "name": "Neil Crookes",
