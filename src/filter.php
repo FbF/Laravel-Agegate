@@ -101,7 +101,7 @@ class LaravelAgegateFilter {
 
 	public function getAgeGateRedirect()
 	{
-	    return \Redirect::to(\Config::get('laravel-agegate::agegate_uri').$_SERVER['REQUEST_URI']);
+	    return \Redirect::to(\Config::get('laravel-agegate::agegate_uri').'?'.$_SERVER['QUERY_STRING']);
 	}
 
 }
